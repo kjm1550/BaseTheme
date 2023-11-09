@@ -1,0 +1,38 @@
+{
+  "name": "baseTheme",
+  "version": "1.0.0",
+  "description": "Hi. I am a custom theme build by BaseTheme",
+  "author": "BaseTheme",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.1.12",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.45.0",
+    "@prettier/plugin-php": "0.14.3",
+    "prettier": "2.0.5"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "sass": "sass --watch sass/style.scss sass/style.css",
+    "sass-glide": "sass --watch js/glide/sass/input.scss js/glide/glide-style.min.css",
+    "post": "postcss sass/style.css --output style.css --no-map --use autoprefixer cssnano --watch"
+  }
+}

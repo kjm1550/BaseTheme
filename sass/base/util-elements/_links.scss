@@ -1,0 +1,4 @@
+a:active:focus,
+button:not(.button):active:focus {
+  outline: $black solid 2px;
+}

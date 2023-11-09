@@ -1,0 +1,70 @@
+/*
+These Mixins are used to create media queries that are quick and easy to add to the scss
+
+To add these to the scss:
+
+selector
+@include smallerThanDesktop {
+	declaration/s
+}
+*/
+
+@mixin smallerThanDesktop {
+	@media (max-width: #{$desktop-width - 1px}) {
+	  @content;
+	}
+  }
+  
+  @mixin largerThanMobile {
+	@media (min-width: #{$tablet-width}) {
+	  @content;
+	}
+  }
+  
+  @mixin mobile {
+	@media (max-width: #{$tablet-width - 1px}) {
+	  @content;
+	}
+  }
+  
+  @mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+	  @content;
+	}
+  }
+  
+  @mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+	  @content;
+	}
+  }
+
+// color mixin
+@mixin colorSelectors($colorName, $colorHex) {
+	.#{$colorName} {
+		color: $colorHex;
+	}
+	.#{$colorName}-bg {
+		background-color: $colorHex;
+	}
+}
+
+/*
+These Mixins are used to create easy to use font styles
+
+To add these to the scss:
+
+selector {
+	@include mixin
+}
+*/
+
+// Example
+// @mixin DroidSansReg {
+// 	font-family: $droidSans;
+// 	font-weight: 400;
+// }
+// @mixin DroidSansBold {
+// 	font-family: $droidSans;
+// 	font-weight: 700;
+// }

@@ -1,0 +1,33 @@
+.container {
+    max-width: 1728px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    @include tablet {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @include mobile {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &--narrow{
+      max-width: 1200px;
+    }
+  }
+  
+  .all-caps {
+    text-transform: uppercase;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .no-scroll {
+    height: 100%;
+    overflow-y: hidden;
+  }
+  
